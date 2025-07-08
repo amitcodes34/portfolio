@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amit Kumar | Interactive Portfolio</title>
+
+  <!-- Tailwind + Vanilla‑Tilt -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{--bg-from:#0f40b2;--bg-to:#1e628a;--accent:#f43f5e;--glass:rgba(255,255,255,.12);}
+    body{font-family:'Poppins',sans-serif;background:radial-gradient(circle at 20% 20%,#812e34 0%,var(--bg-from) 40%,var(--bg-to) 100%);min-height:100vh;color:#e2e8f0;overflow-x:hidden;scroll-behavior:smooth;}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;background:url('https://raw.githubusercontent.com/tholman/particles.js/master/demo/img/stars.png');animation:moveStars 120s linear infinite;opacity:.25;}
+    @keyframes moveStars{from{transform:translateY(0)}to{transform:translateY(-1000px)}}
+    .glass{background:var(--glass);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.25);box-shadow:0 4px 24px rgba(0,0,0,.25);}    
+    .tilt-card:hover{transform:translateY(-6px) rotateX(6deg) rotateY(-6deg);transition:.4s}
+  </style>
+</head>
+<body class="text-slate-200">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="glass fixed top-4 left-1/2 -translate-x-1/2 w-[90%] md:w-3/4 py-3 px-6 rounded-full flex justify-between items-center z-50">
+    <h1 class="text-xl font-bold tracking-wide">Amit Kumar</h1>
+    <ul id="navLinks" class="hidden md:flex gap-8 font-medium">
+      <li><a href="#about" class="hover:text-rose-400">About</a></li>
+      <li><a href="#skills" class="hover:text-rose-400">Skills</a></li>
+      <li><a href="#projects" class="hover:text-rose-400">Projects</a></li>
+      <li><a href="#contact"  class="hover:text-rose-400">Contact</a></li>
+    </ul>
+    <button id="hamburger" class="md:hidden text-2xl">☰</button>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="relative flex flex-col items-center justify-center pt-32 pb-24 text-center overflow-hidden">
+    <div class="absolute -top-40 -left-20 w-96 h-96 bg-rose-600 rounded-full opacity-40 blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-[-120px] right-[-120px] w-[500px] h-[500px] bg-indigo-600 rounded-full opacity-30 blur-3xl"></div>
+
+    <div data-aos="fade-up">
+      <img src="amit_img.jpg" alt="Amit Kumar" class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-xl ring-4 ring-rose-500 mx-auto" data-aos="zoom-in" />
+      <h1 class="text-4xl md:text-5xl font-extrabold mt-6 drop-shadow">Amit Kumar</h1>
+      <p class="mt-2 text-lg">B.Tech Student &amp; Developer</p>
+      <a href="#contact" class="mt-6 inline-block px-6 py-2 bg-rose-500 hover:bg-rose-600 rounded-full shadow-md">Get in Touch</a>
+    </div>
+  </header>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="px-6 py-20">
+    <h3 class="text-3xl font-bold text-center mb-10">About&nbsp;Me</h3>
+    <div class="glass p-8 rounded-xl max-w-4xl mx-auto text-lg leading-relaxed" data-tilt>
+      <p>🚀 I’m a <strong>full‑stack developer</strong> and B.Tech student (AI &amp; ML). Over <strong>500+ DSA problems</strong> solved across platforms: <a class="text-rose-300 underline" href="https://leetcode.com/amitkumarnike76" target="_blank">LeetCode</a>, <a class="text-rose-300 underline" href="https://www.codechef.com/users/rajkumar59" target="_blank">CodeChef</a>, and <a class="text-rose-300 underline" href="https://auth.geeksforgeeks.org/user/amitraj34" target="_blank">GfG</a>. I love blending sleek UI with intelligent back‑end logic to ship impactful products.</p>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="px-6 py-20">
+    <h3 class="text-3xl font-bold text-center mb-10">Tech Stack&nbsp;&amp;&nbsp;Skills</h3>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+      <div class="glass p-6 rounded-xl text-center tilt-card">Programming<br><span class="text-sm opacity-80">C++ • Python • Java</span></div>
+      <div class="glass p-6 rounded-xl text-center tilt-card">HTML &amp; CSS</div>
+      <div class="glass p-6 rounded-xl text-center tilt-card">JavaScript / TypeScript</div>
+      <div class="glass p-6 rounded-xl text-center tilt-card">React &amp; Next.js</div>
+      <div class="glass p-6 rounded-xl text-center tilt-card">Node.js / Express</div>
+      <div class="glass p-6 rounded-xl text-center tilt-card">MongoDB &amp; PostgreSQL</div>
+      <div class="glass p-6 rounded-xl text-center tilt-card">Tailwind CSS</div>
+      <div class="glass p-6 rounded-xl text-center tilt-card">AI / TensorFlow</div>
+      <div class="glass p-6 rounded-xl text-center tilt-card">500+ DSA Problems</div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="bg-slate-50 text-slate-800 px-6 py-20">
+    <h3 class="text-3xl font-bold text-center mb-12">Featured Project</h3>
+    <div class="relative max-w-5xl mx-auto">
+      <div class="absolute inset-0 bg-gradient-to-tr from-rose-400 to-indigo-600 opacity-50 blur-2xl rounded-xl"></div>
+      <div class="glass p-10 rounded-xl relative z-10 shadow-2xl tilt-card" data-tilt-glare data-tilt-max-glare="0.3">
+        <h4 class="text-2xl font-bold mb-4 text-rose-600">Facial Recognition Attendance System</h4>
+        <ul class="list-disc pl-6 space-y-2 text-lg">
+          <li>Led hackathon team building real‑time ML facial recognition.</li>
+          <li>Automated attendance; boosted accuracy & cut manual errors.</li>
+          <li>Stack: Python, OpenCV, TensorFlow, Flask backend.</li>
+          <li>Deployment on Raspberry Pi & cloud dashboard for analytics.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="px-6 py-20">
+    <h3 class="text-3xl font-bold text-center mb-10">Education</h3>
+    <div class="glass p-8 rounded-xl max-w-4xl mx-auto text-lg leading-relaxed" data-tilt>
+      <ul class="list-disc pl-6 space-y-4">
+        <li><strong>B.Tech (CSE) – AI & ML</strong><br />UIET Rohtak | Expected 2026 | CGPA: 7.5</li>
+        <li><strong>Higher Secondary</strong><br />Gaya College Gaya, Bihar | 2021</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="px-6 py-20">
+    <h3 class="text-3xl font-bold text-center mb-10">Let’s Collaborate</h3>
+    <div class="glass p-8 rounded-xl max-w-md mx-auto text-center" data-tilt>
+      <p class="mb-4">Got an idea or opening? Let’s talk.</p>
+      <p>📞 +91‑9142810960</p>
+      <p>📧 amitkumarnike76@gmail.com</p>
+      <p>📍 Rohtak, India</p>
+      <a href="https://www.linkedin.com/in/amit-kumar-bb36a2258" target="_blank" class="inline-block mt-6 px-6 py-2 bg-rose-500 hover:bg-rose-600 rounded-full shadow-md">LinkedIn ↗</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="text-center py-6 text-sm text-slate-400">© 2025 Amit Kumar — Built with <span class="text-rose-400">❤</span></footer>
+
+  <script>
+    VanillaTilt.init(document.querySelectorAll('[data-tilt]'),{max:12,speed:400,scale:1.04,glare:true,'max-glare':0.25});
+    document.getElementById('hamburger').addEventListener('click',()=>{
+      document.getElementById('navLinks').classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
